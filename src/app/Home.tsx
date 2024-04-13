@@ -1,21 +1,18 @@
 "use client";
-
 import Header from "@/components/Header";
 import { MainContent } from "./styles";
 import HomeScreen from "@/components/HomeScreen";
 import PreContent from "@/components/PreContent";
-
 import heartIcon from "@/assets/heart.svg";
 import buildIcon from "@/assets/construcao.svg";
 import BestSearchHouses from "@/components/BestSearchHouses";
 import ListCatalog from "@/components/ListCatalog";
 import KnowUs from "@/components/KnowUs";
 import HousesByRegion from "@/components/HousesByRegion";
-import Footer from "@/shared/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    (
       <MainContent>
         <Header />
         <HomeScreen />
@@ -57,8 +54,7 @@ export default function Home() {
 
         <HousesByRegion />
       </MainContent>
-
-      <Footer />
-    </>
+    ),
+    (<Footer />)
   );
 }
