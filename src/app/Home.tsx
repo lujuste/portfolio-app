@@ -9,10 +9,11 @@ import BestSearchHouses from "@/components/BestSearchHouses";
 import ListCatalog from "@/components/ListCatalog";
 import KnowUs from "@/components/KnowUs";
 import HousesByRegion from "@/components/HousesByRegion";
+import Footer from "@/shared/components/Footer";
 
 export default function Home() {
   return (
-    (
+    <>
       <MainContent>
         <Header />
         <HomeScreen />
@@ -39,7 +40,7 @@ export default function Home() {
           buttonLabel="Conheça nossa história"
           src={buildIcon}
           content="Nossa 
-        história"
+    história"
         />
 
         <KnowUs />
@@ -54,7 +55,8 @@ export default function Home() {
 
         <HousesByRegion />
       </MainContent>
-    ),
-    (<Footer />)
+
+      <Footer />
+    </>
   );
 }

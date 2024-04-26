@@ -13,6 +13,12 @@ import KnowUs from "@/components/KnowUs";
 import HousesByRegion from "@/components/HousesByRegion";
 import Footer from "@/shared/components/Footer";
 
+// Import Swiper styles
+// Import Swiper styles
+import "swiper/css";
+
+// import "./globalStyles.css";
+
 export default function Home() {
   return (
     <>
