@@ -33,7 +33,7 @@ export default function Home() {
           content="Novidades no catálogo"
         />
 
-        <ListCatalog />
+        <ListCatalog paddingLeft="50px" />
 
         <PreContent
           callback={() => {}}
@@ -56,7 +56,7 @@ export default function Home() {
         <HousesByRegion />
       </MainContent>
 
-      <Footer />
+      <Footer margin="72px" />
     </>
   );
 }

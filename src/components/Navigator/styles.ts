@@ -22,6 +22,12 @@ export const StyledNav = styled.nav`
 export const StyledLink = styled.a`
   text-decoration: none;
   color: inherit;
+
+  font-family: Inter, sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 7px;
 `;
 
 export const VStack = styled.div`

@@ -12,6 +12,15 @@ export const Container = styled.main`
 export const HStack = styled.div`
   display: flex;
   position: relative;
+  max-width: 387px;
+  /* background-color: red; */
+`;
+
+export const HStackHero = styled.div`
+  display: flex;
+  position: relative;
+  flex: 1;
+  /* background-color: green; */
 `;
 
 export const HStackCustom = styled.div`
@@ -38,6 +47,7 @@ export const SelectStyled = styled.div`
 export const VStack = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 357px;
 
   h2 {
     font-size: 56px;

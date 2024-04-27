@@ -14,7 +14,7 @@ export const StyledInput = styled.input`
 `;
 
 export const Box = styled.div`
-  width: 384px;
+  width: 100%;
   height: 64px;
   display: flex;
   border: 2px solid #da4949;

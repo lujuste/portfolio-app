@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{ paddingLeft: string }>`
   display: flex;
   width: 100%;
   flex-direction: column;
   max-width: 1366px;
   margin: 70px auto;
-  padding-left: 50px;
+  padding-left: ${({ paddingLeft }) => paddingLeft && paddingLeft};
 `;
 
 export const HStack = styled.div`

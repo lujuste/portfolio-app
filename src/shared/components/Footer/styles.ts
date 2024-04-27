@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.footer`
+export const Container = styled.footer<{ margin?: string }>`
   width: 100%;
   height: 242px;
   background-color: #000;
   display: flex;
-  margin-top: 72px;
+  margin-top: ${({ margin }) => margin && margin};
 `;
 
 export const EndFooter = styled.footer`
@@ -63,19 +63,19 @@ export const MaxWidth = styled.div`
   height: 100%;
   margin: 0 auto;
   display: flex;
-  padding: 0 20px;
+  padding: 0 50px;
 `;
 
 export const BoxLogo = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   gap: 24px;
 
   h3 {
     font-size: 16px;
     color: #c4c4c4;
-    margin-left: 2.6rem;
+    /* margin-left: 2.6rem; */
   }
 `;

@@ -4,8 +4,10 @@ export const Container = styled.div`
   width: 100%;
   height: 120px;
   display: flex;
-  padding: 0 50px;
+  padding: 0 0px;
   justify-content: space-between;
+  padding-right: 69px;
+  margin-top: 72px;
 `;
 
 export const HStack = styled.div`

@@ -5,10 +5,13 @@ import SecondaryContent from "../SecondaryContent";
 import houseOne from "@/assets/casa.png";
 
 // import { Container } from './styles';
+type Props = {
+  paddingLeft: string;
+};
 
-const ListCatalog: React.FC = () => {
+const ListCatalog: React.FC<Props> = ({ paddingLeft }) => {
   return (
-    <Container>
+    <Container paddingLeft={paddingLeft}>
       <HStack>
         <Informations src={houseOne} />
         <SecondaryContent />

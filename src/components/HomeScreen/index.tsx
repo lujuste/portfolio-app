@@ -6,6 +6,7 @@ import {
   Container,
   HStack,
   HStackCustom,
+  HStackHero,
   SelectStyled,
   VStack,
 } from "./styles";
@@ -60,7 +61,7 @@ const HomeScreen: React.FC = () => {
           <CustomButton title="Encontrar imóvel" />
         </VStack>
 
-        <HStack className="box-primary-images">
+        <HStackHero className="box-primary-images">
           <HeroMain
             onMouseEnter={() => handleChangeImageExpanded(1)}
             isExpanded={imageExpanded.visible === 1}
@@ -87,7 +88,7 @@ const HomeScreen: React.FC = () => {
             }
             text={"Jardim Bueno"}
           />
-        </HStack>
+        </HStackHero>
       </HStack>
     </Container>
   );

@@ -14,6 +14,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import Image from "next/image";
 import DescriptionSpecific from "@/components/DescriptionSpecific";
+import Footer from "@/shared/components/Footer";
 
 const SpecificPage: React.FC = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
@@ -166,6 +167,7 @@ const SpecificPage: React.FC = () => {
 
         <DescriptionSpecific />
       </MainContent>
+      <Footer margin="0"></Footer>
     </>
   );
 };

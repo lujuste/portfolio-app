@@ -13,10 +13,14 @@ import Logo from "@/assets/logo-white.svg";
 import Image from "next/image";
 import redLogo from "@/assets/Modo_de_isolamento.svg";
 
-const Footer: React.FC = () => {
+type Props = {
+  margin: string;
+};
+
+const Footer: React.FC<Props> = ({ margin }) => {
   return (
     <>
-      <Container>
+      <Container margin={margin}>
         <MaxWidth>
           <BoxLogo>
             <Image
@@ -60,20 +64,22 @@ const Footer: React.FC = () => {
         </MaxWidth>
       </Container>
       <EndFooter>
-        <p>2024 © Copyright Portfolio imóveis</p>
+        <MaxWidth>
+          <p>2024 © Copyright Portfolio imóveis</p>
 
-        <TotalRightBox>
-          <p>Desenvolvido por:</p>
+          <TotalRightBox>
+            <p>Desenvolvido por:</p>
 
-          <Image
-            src={redLogo}
-            quality={100}
-            width={19}
-            height={24}
-            alt="logo-imobiliaria-portfolio"
-            unoptimized
-          />
-        </TotalRightBox>
+            <Image
+              src={redLogo}
+              quality={100}
+              width={19}
+              height={24}
+              alt="logo-imobiliaria-portfolio"
+              unoptimized
+            />
+          </TotalRightBox>
+        </MaxWidth>
       </EndFooter>
     </>
   );
