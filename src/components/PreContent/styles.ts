@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const HStack = styled.div`
   display: flex;
   position: relative;
-  width: 330px;
+  width: 347px;
   align-items: center;
   gap: 30px;
 

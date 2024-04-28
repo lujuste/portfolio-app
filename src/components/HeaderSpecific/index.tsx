@@ -5,22 +5,30 @@ import React from "react";
 import {
   Button,
   Container,
+  ContentBox,
   HStack,
   Input,
   LineDivider,
   RightMenu,
   SearchMenu,
   VStack,
+  WrapperButton,
 } from "./styles";
 // import Link from "next/link";
 import { StyledLink } from "../Navigator/styles";
 import { usePathname } from "next/navigation";
 import logo from "@/assets/LogoRed.svg";
 import Image from "next/image";
-import { MagnifyingGlass } from "phosphor-react";
+import { MagnifyingGlass, WhatsappLogo } from "phosphor-react";
 import buildIcon from "@/assets/build.svg";
+import CustomButton from "../CustomButton";
+import iconWhats from "@/assets/whatsicon.svg";
 
-const HeaderSpecific: React.FC = () => {
+type Props = {
+  isSearch?: boolean;
+};
+
+const HeaderSpecific: React.FC<Props> = ({ isSearch = false }) => {
   const pathname = usePathname();
   return (
     <VStack>
@@ -57,26 +65,41 @@ const HeaderSpecific: React.FC = () => {
           />
         </div>
 
-        <HStack>
-          <RightMenu>
-            <Image
-              src={buildIcon}
-              width={24}
-              height={24}
-              quality={100}
-              priority
-              alt="logo-imobiliaria-portfolio"
-              unoptimized
-            />
-            <p>Tipo de imóvel</p>
-          </RightMenu>
-          <SearchMenu>
-            <Input type="text" placeholder="Digite região..." />
-          </SearchMenu>
-          <Button>
-            <MagnifyingGlass color="#fff" size={24} weight="bold" />
-          </Button>
-        </HStack>
+        {isSearch ? (
+          <ContentBox>
+            <WrapperButton>
+              <CustomButton title="Falar com um corretor" height="48px">
+                <Image
+                  width={24}
+                  height={24}
+                  alt="Whatsapp icone"
+                  src={iconWhats}
+                />
+              </CustomButton>
+            </WrapperButton>
+          </ContentBox>
+        ) : (
+          <HStack>
+            <RightMenu>
+              <Image
+                src={buildIcon}
+                width={24}
+                height={24}
+                quality={100}
+                priority
+                alt="logo-imobiliaria-portfolio"
+                unoptimized
+              />
+              <p>Tipo de imóvel</p>
+            </RightMenu>
+            <SearchMenu>
+              <Input type="text" placeholder="Digite região..." />
+            </SearchMenu>
+            <Button>
+              <MagnifyingGlass color="#fff" size={24} weight="bold" />
+            </Button>
+          </HStack>
+        )}
       </Container>
 
       <LineDivider>

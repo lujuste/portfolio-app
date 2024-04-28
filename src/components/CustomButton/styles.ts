@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Button = styled.button<{ height: string }>`
   width: 100%;
-  height: 63px;
+  height: ${({ height }) => height};
   background-color: #d71016;
   color: #fff;
   font-size: 16px;
-  font-weight: semi-bold;
+  font-weight: 600;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 `;

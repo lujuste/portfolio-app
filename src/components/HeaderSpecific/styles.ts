@@ -38,6 +38,21 @@ export const Container = styled.header`
   }
 `;
 
+export const ContentBox = styled.div`
+  display: flex;
+  margin-left: auto;
+  flex: 1;
+  height: 50px;
+  /* background-color: blue; */
+  justify-content: flex-end;
+`;
+
+export const WrapperButton = styled.div`
+  display: flex;
+  width: 280px;
+  height: 100%;
+`;
+
 export const RightMenu = styled.div`
   width: 211px;
   max-width: 211px;

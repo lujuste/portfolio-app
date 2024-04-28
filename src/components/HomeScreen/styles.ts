@@ -20,6 +20,7 @@ export const HStackHero = styled.div`
   display: flex;
   position: relative;
   flex: 1;
+  margin-left: -10px;
   /* background-color: green; */
 `;
 
@@ -36,6 +37,7 @@ export const SelectStyled = styled.div`
   justify-content: center;
   align-items: center;
   gap: 16px;
+  padding: 0 10px;
 
   span {
     font-size: 16px;
@@ -47,7 +49,7 @@ export const SelectStyled = styled.div`
 export const VStack = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 357px;
+  max-width: 387px;
 
   h2 {
     font-size: 56px;
