@@ -10,7 +10,7 @@ export const RadialContainer = styled.div`
 
 export const PresentationHero = styled.div<{ isExpanded: boolean }>`
   position: relative;
-  width: ${({ isExpanded }) => (isExpanded ? "352px" : "176px")};
+  width: ${({ isExpanded }) => (isExpanded ? "405px" : "176px")};
   max-width: ${({ isExpanded }) => (isExpanded ? "1366px" : "176px")};
   height: calc(100% - 150px);
   margin-left: 42px;

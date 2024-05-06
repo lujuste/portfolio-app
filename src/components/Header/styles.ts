@@ -7,7 +7,7 @@ export const StyledHeader = styled.header`
   height: 48px;
   margin-top: 41px;
   align-items: center;
-  padding: 0 0 0 51px;
+  /* padding: 0 0 0 51px; */
 
   .logo-imobiliaria {
     width: 259px;

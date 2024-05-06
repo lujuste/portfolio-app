@@ -41,7 +41,7 @@ export default function Home() {
           content="Novidades no catálogo"
         />
 
-        <ListCatalog paddingLeft="50px" />
+        <ListCatalog paddingLeft="0px" />
 
         <PreContent
           callback={() => {}}

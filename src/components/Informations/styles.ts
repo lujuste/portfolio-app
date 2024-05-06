@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainContent = styled.div`
   width: 100%;
   display: flex;
-  max-width: 593px;
+  max-width: 618px;
   height: 680px;
   position: relative;
   flex-direction: column;

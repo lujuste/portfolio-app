@@ -6,7 +6,7 @@ export const Container = styled.main`
   /* background-color: red; */
   display: flex;
   margin-top: 0.8rem;
-  padding: 0 50px;
+  /* padding: 0 50px; */
 `;
 
 export const HStack = styled.div`

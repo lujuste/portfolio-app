@@ -6,7 +6,7 @@ export const Main = styled.div`
   flex-direction: column;
   max-width: 1366px;
   margin: 35px auto;
-  padding-left: 50px;
+  /* padding-left: 50px; */
 `;
 
 export const HStack = styled.div`

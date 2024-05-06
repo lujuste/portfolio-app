@@ -5,6 +5,8 @@ export const Container = styled.footer<{ margin?: string }>`
   height: 242px;
   background-color: #000;
   display: flex;
+  padding: 0 50px;
+  /* background-color: blue; */
   margin-top: ${({ margin }) => margin && margin};
 `;
 
@@ -63,7 +65,7 @@ export const MaxWidth = styled.div`
   height: 100%;
   margin: 0 auto;
   display: flex;
-  padding: 0 50px;
+  padding: 0 0px;
 `;
 
 export const BoxLogo = styled.div`
@@ -72,6 +74,7 @@ export const BoxLogo = styled.div`
   /* align-items: center; */
   justify-content: center;
   gap: 24px;
+  /* padding-left: 50px; */
 
   h3 {
     font-size: 16px;
