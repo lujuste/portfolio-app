@@ -81,7 +81,7 @@ const StepsComponents: React.FC<Props> = ({ currentStep, setCurrentStep }) => {
       )}
 
       {currentStep !== "end" && currentStep !== "initial" && (
-        <RenderStepScreen />
+        <RenderStepScreen nextStep={nextStep} currentStep={currentStep} />
       )}
 
       {currentStep === "end" && (

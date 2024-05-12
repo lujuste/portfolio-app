@@ -3,7 +3,11 @@ import React from "react";
 import { ButtonBack, ButtonSkip, Container, ColumContainer } from "./styles";
 import { ArrowLeft, ArrowRight } from "phosphor-react";
 
-const SkipAndBack: React.FC = () => {
+type Props = {
+  nextStep(): void;
+};
+
+const SkipAndBack: React.FC<Props> = ({ nextStep }) => {
   return (
     <ColumContainer>
       <Container>
@@ -11,7 +15,7 @@ const SkipAndBack: React.FC = () => {
           {" "}
           <ArrowLeft size={24} /> Anterior
         </ButtonBack>
-        <ButtonSkip>
+        <ButtonSkip onClick={nextStep}>
           Próximo <ArrowRight size={24} />
         </ButtonSkip>
       </Container>
