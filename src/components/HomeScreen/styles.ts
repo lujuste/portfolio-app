@@ -20,8 +20,6 @@ export const HStackHero = styled.div`
   display: flex;
   position: relative;
   flex: 1;
-  margin-left: -0px;
-  /* background-color: green; */
 `;
 
 export const HStackCustom = styled.div`

@@ -13,6 +13,12 @@ export const FormText = styled.textarea`
   outline: none;
   font-family: Inter;
   margin-top: 1rem;
+
+  &::placeholder {
+    font-size: 14px;
+    color: #a4a4a4;
+    font-family: Inter;
+  }
 `;
 
 export const VStack = styled.div`

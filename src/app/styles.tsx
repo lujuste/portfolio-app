@@ -7,4 +7,5 @@ export const MainContent = styled.main`
   flex-direction: column;
   margin: 0 auto;
   padding: 0 50px;
+  overflow-x: hidden;
 `;

@@ -3,11 +3,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 1366px;
-  min-height: 720px;
+  height: 100dvh;
   display: flex;
   flex: 1;
-  /* background-color: red; */
   margin: 0 auto;
+  overflow: hidden;
+  /* background-color: red; */
 `;
 
 export const StyledLink = styled.a`
@@ -26,9 +27,10 @@ export const ImageWrapper = styled.div<{ url?: string | StaticImageData }>`
   height: 100%;
   display: flex;
   background-image: ${({ url }) => url && `url(${url})`};
-  min-height: 720px;
+  max-width: 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  /* max-height: 800px; */
 `;
 
 export const FormsWrapper = styled.div`
@@ -37,7 +39,8 @@ export const FormsWrapper = styled.div`
   display: flex;
   /* background-color: green; */
   min-height: 689px;
-  padding: 28px;
+  padding: 0 42px;
+  overflow-y: auto;
 `;
 
 export const Content = styled.div`

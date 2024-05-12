@@ -11,6 +11,7 @@ export const BoxBar = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: transparent;
 
   h3 {
     font-size: 32px;

@@ -33,7 +33,7 @@ const Steps: React.FC = () => {
         <Content>
           <HeaderSteps Logo={Logo} />
 
-          <div className="divider" />
+          {/* <div className="divider" /> */}
 
           <StepsComponents
             currentStep={currentStep}

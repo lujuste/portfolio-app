@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   padding: 0 50px 0 0;
   justify-content: space-between;
+  margin-top: 42px;
 `;
 
 export const HStack = styled.div`

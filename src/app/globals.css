@@ -3,9 +3,10 @@
   margin: 0;
   box-sizing: border-box;
   font-smooth: antialiased;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow-x: hidden; */
+  
 
   .swiper {
     width: 100%;
@@ -46,4 +47,7 @@
     height: 100%;
     object-fit: cover;
   }
+
+
 }
+

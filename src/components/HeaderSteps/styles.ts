@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const Header = styled.div`
   /* background-color: blue; */
   display: flex;
-  height: 77px;
+  min-height: 120px;
   width: 100%;
   align-items: center;
   padding: 0 10px;
+  border-bottom: 1px solid #bdbdbd;
 
   > div {
     display: flex;

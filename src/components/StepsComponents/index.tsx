@@ -3,6 +3,8 @@ import { Container, FormText, HStack, VStack } from "./styles";
 import { Input } from "@/app/imovel/styles";
 import { Button } from "../CustomButton/styles";
 import StepsUI from "../StepsUI";
+import Owner from "../RenderStepScreen";
+import RenderStepScreen from "../RenderStepScreen";
 
 type Props = {
   currentStep: string;
@@ -13,7 +15,14 @@ const InitialComponent: React.FC<{
   setCurrentStep: React.Dispatch<React.SetStateAction<string>>;
 }> = ({ setCurrentStep }) => {
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        overflowY: "auto",
+        minHeight: "620px",
+      }}
+    >
       <h2>Encomende seu imóvel</h2>
       <p>Descreva as características abaixo:</p>
       <FormText placeholder="Ex. Desejo uma casa com dois dormitórios, garagem com duas vagas e duas suítes no bairro Jardim Bueno." />
@@ -37,7 +46,7 @@ const InitialComponent: React.FC<{
         perferendis hic molestiae aspernatur repellendus earum iste ab
         asperiores?
       </span>
-    </>
+    </div>
   );
 };
 
@@ -71,6 +80,10 @@ const StepsComponents: React.FC<Props> = ({ currentStep, setCurrentStep }) => {
         </>
       )}
 
+      {currentStep !== "end" && currentStep !== "initial" && (
+        <RenderStepScreen />
+      )}
+
       {currentStep === "end" && (
         <Container>
           <h2>
@@ -79,14 +92,14 @@ const StepsComponents: React.FC<Props> = ({ currentStep, setCurrentStep }) => {
         </Container>
       )}
 
-      <div style={{ width: "100%", display: "flex", marginTop: "auto" }}>
+      {/* <div style={{ width: "100%", display: "flex", marginTop: "auto" }}>
         {currentStep !== "initial" && currentStep !== "end" && (
           <>
             <button>Recuar</button>
             <button onClick={nextStep}>Avancar</button>
           </>
         )}
-      </div>
+      </div> */}
     </>
   );
 };
