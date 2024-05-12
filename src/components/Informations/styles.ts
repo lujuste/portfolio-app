@@ -3,12 +3,16 @@ import styled from "styled-components";
 export const MainContent = styled.div`
   width: 100%;
   display: flex;
-  max-width: 618px;
+  max-width: 616px;
   height: 680px;
   position: relative;
   flex-direction: column;
   padding: 37px 23px;
   align-items: center;
+
+  @media (max-width: 1366px) {
+    max-width: 610px;
+  }
 `;
 
 export const BoxGradient = styled.div`
