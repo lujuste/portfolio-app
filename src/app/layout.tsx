@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
 import StyledComponentsRegistry from "@/lib/registry";
+import { DeviceContextProvider } from "@/hooks/useDevice";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <StyledComponentsRegistry>
-        <body className={inter.className}>{children}</body>
+        <DeviceContextProvider>
+          <body className={inter.className}>{children}</body>
+        </DeviceContextProvider>
       </StyledComponentsRegistry>
     </html>
   );

@@ -4,9 +4,13 @@ import imovelIcon from "@/assets/imoveis.svg";
 import arrowIcon from "@/assets/arrow.svg";
 import {
   Container,
+  ContainerDevice,
   HStack,
   HStackCustom,
   HStackHero,
+  Horizontal,
+  ImageContainer,
+  ImageContent,
   SelectStyled,
   VStack,
 } from "./styles";
@@ -14,11 +18,15 @@ import Image from "next/image";
 import Search from "../Search";
 import CustomButton from "../CustomButton";
 import HeroMain from "../HeroMain";
+import { useDevice } from "@/hooks/useDevice";
+import { RadialContainer } from "../HeroMain/styles";
 
 const HomeScreen: React.FC = () => {
   const [imageExpanded, setImageExpanded] = useState({
     visible: 1,
   });
+
+  const { isDevice } = useDevice();
 
   const handleChangeImageExpanded = useCallback((value: number) => {
     setImageExpanded((prevState) => {
@@ -28,6 +36,69 @@ const HomeScreen: React.FC = () => {
       };
     });
   }, []);
+
+  if (isDevice) {
+    return (
+      <ContainerDevice>
+        <h2>Realize seu sonho aqui</h2>
+
+        <Horizontal>
+          <SelectStyled>
+            <Image
+              src={arrowIcon}
+              width={16}
+              height={19}
+              alt="Icone de seta."
+            />
+            <span>Pretensão</span>
+          </SelectStyled>
+
+          <SelectStyled>
+            <Image
+              src={imovelIcon}
+              width={24}
+              height={24}
+              alt="Icone de imovel."
+            />
+            <span>Tipo de imóvel</span>
+          </SelectStyled>
+        </Horizontal>
+        <Search />
+        <CustomButton title="Encontrar imóvel" />
+        <Horizontal>
+          <ImageContent>
+            <RadialContainer />
+            <ImageContainer>
+              <Image
+                src="https://img.freepik.com/fotos-gratis/design-house-villa-moderna-com-sala-de-estar-em-plano-aberto-e-ala-de-quarto-privado-grande-terraco-com-privacidade_1258-169741.jpg"
+                alt="Imagem principal de uma casa de luxo"
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                priority
+              />
+            </ImageContainer>
+            <span>Casa Alphaville</span>
+          </ImageContent>
+
+          <ImageContent>
+            <RadialContainer />
+            <ImageContainer>
+              <Image
+                src="https://img.freepik.com/fotos-gratis/design-house-villa-moderna-com-sala-de-estar-em-plano-aberto-e-ala-de-quarto-privado-grande-terraco-com-privacidade_1258-169741.jpg"
+                alt="Imagem principal de uma casa de luxo"
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                priority
+              />
+            </ImageContainer>
+            <span>Casa Alphaville</span>
+          </ImageContent>
+        </Horizontal>
+      </ContainerDevice>
+    );
+  }
 
   return (
     <Container>

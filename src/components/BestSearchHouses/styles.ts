@@ -6,7 +6,50 @@ export const Container = styled.div`
   flex-direction: column;
   max-width: 1366px;
   margin: 70px auto;
+
+  @media (max-width: 1366px) {
+    margin: 32px auto;
+  }
+
   /* padding-left: 50px; */
+`;
+
+export const BoxImage = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  height: 200px;
+  background-color: red;
+`;
+
+export const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+export const ImageContent = styled.div`
+  position: relative; /* Adiciona posição relativa para que a imagem possa se ajustar usando layout="fill" */
+  width: 100%;
+  height: calc(
+    100vw * 209 / 428
+  ); /* Ajuste o valor 428 conforme necessário para corresponder à largura da imagem */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  overflow: hidden;
+`;
+
+export const ImageContentLarge = styled.div`
+  position: relative; /* Adiciona posição relativa para que a imagem possa se ajustar usando layout="fill" */
+  width: 100%;
+  height: calc(
+    100vw * 209 / 228
+  ); /* Ajuste o valor 428 conforme necessário para corresponder à largura da imagem */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  overflow: hidden;
 `;
 
 export const HStack = styled.div`
@@ -14,6 +57,150 @@ export const HStack = styled.div`
   position: relative;
   margin: 17px 0;
   gap: 30px;
+`;
+
+export const Left = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  max-width: 200px;
+  padding: 20px 20px;
+  gap: 5px;
+
+  p {
+    font-size: 7px;
+  }
+
+  p,
+  h2 {
+    color: #fff;
+  }
+
+  h2 {
+    font-size: 24px;
+    word-wrap: break-word;
+    width: 100%;
+    max-width: 157px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 50%;
+  }
+
+  @media (max-width: 468px) {
+    max-width: 140px;
+
+    h2 {
+      font-size: 16px;
+      word-wrap: break-word;
+      width: 100%;
+      max-width: 137px;
+    }
+  }
+`;
+
+export const Detail = styled.div`
+  width: 100%;
+  height: 30px;
+  border: 1px solid #fff;
+  display: flex;
+  border-radius: 5px;
+`;
+
+export const HBox = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+
+  p {
+    color: #fff;
+    font-size: 10px;
+  }
+`;
+
+export const Right = styled.div`
+  display: grid;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+  /* background: green; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  /* align-items: center; */
+  /* justify-content: flex-end; */
+  padding: 0 20px 0 0px;
+  min-width: 170px;
+
+  @media (max-width: 768px) {
+    max-width: 300px;
+  }
+
+  @media (max-width: 500px) {
+    min-width: 170px;
+  }
+
+  @media (max-width: 346px) {
+    min-width: 160px;
+  }
+`;
+
+export const VStack = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+`;
+
+export const Item = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background: transparent;
+  /* border: 2px solid #fff; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-right: auto;
+
+  &:first-child,
+  &:nth-child(2) {
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+
+  &:nth-child(3),
+  &:nth-child(4) {
+    margin-top: 10px;
+  }
+`;
+
+export const BoxDetails = styled.div`
+  width: calc(100% - 36px);
+  height: 65%;
+  display: flex;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 10px;
+  justify-content: flex-end;
+`;
+
+export const BoxDetailsLarge = styled.div`
+  width: calc(100% - 36px);
+  height: calc(
+    100vw * 209 / 528
+  ); /* Ajuste o valor 428 conforme necessário para corresponder à largura da imagem */
+  display: flex;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 10px;
+  justify-content: flex-end;
 `;
 
 export const ContentBox = styled.div`

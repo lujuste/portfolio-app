@@ -7,7 +7,6 @@ const HousesByRegion: React.FC = () => {
     <Container>
       <List>
         <h3>Goiânia</h3>
-
         <ul>
           <li>Jardim Goiás</li>
           <li>Jardim Goiás</li>

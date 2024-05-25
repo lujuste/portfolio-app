@@ -2,6 +2,7 @@ import React from "react";
 import { Centralize, Container, HStack } from "./styles";
 import Image from "next/image";
 import Button from "../Button";
+import { useDevice } from "@/hooks/useDevice";
 
 type Props = {
   content: string;
@@ -18,6 +19,8 @@ const PreContent: React.FC<Props> = ({
   callback,
   avoidDisplayButton = false,
 }) => {
+  const { isDevice } = useDevice();
+
   return (
     <Container>
       <HStack>
@@ -27,7 +30,11 @@ const PreContent: React.FC<Props> = ({
 
       {!avoidDisplayButton && (
         <HStack>
-          <Button onClick={callback} width={"398px"} height={"38px"}>
+          <Button
+            onClick={callback}
+            width={isDevice ? "100%" : "398px"}
+            height={"38px"}
+          >
             <Centralize>{buttonLabel}</Centralize>
           </Button>
         </HStack>

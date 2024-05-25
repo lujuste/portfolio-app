@@ -7,6 +7,15 @@ export const Container = styled.div`
   padding: 0 50px 0 0;
   justify-content: space-between;
   margin-top: 42px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    gap: 18px;
+    margin-top: 18px;
+    margin-bottom: 12px;
+  }
 `;
 
 export const HStack = styled.div`
@@ -18,6 +27,14 @@ export const HStack = styled.div`
 
   h3 {
     font-size: 40px;
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+
+    h3 {
+      font-size: 32px;
+    }
   }
 `;
 

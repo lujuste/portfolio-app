@@ -7,6 +7,10 @@ export const Main = styled.div`
   max-width: 1366px;
   margin: 35px auto;
   /* padding-left: 50px; */
+
+  @media (max-width: 1200px) {
+    margin: 0 auto;
+  }
 `;
 
 export const HStack = styled.div`
@@ -14,6 +18,10 @@ export const HStack = styled.div`
   position: relative;
   margin: 17px 0;
   gap: 30px;
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const ContentBox = styled.div`
@@ -96,4 +104,39 @@ export const MaxWidth = styled.div`
     font-size: 16px;
     line-height: 24px;
   }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    max-width: 100%;
+  }
+`;
+
+export const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+export const ImageContent = styled.div`
+  position: relative; /* Adiciona posição relativa para que a imagem possa se ajustar usando layout="fill" */
+  width: 100%;
+  height: calc(
+    100vw * 209 / 228
+  ); /* Ajuste o valor 428 conforme necessário para corresponder à largura da imagem */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  overflow: hidden;
+`;
+
+export const ImageContentLarge = styled.div`
+  position: relative; /* Adiciona posição relativa para que a imagem possa se ajustar usando layout="fill" */
+  width: 100%;
+  height: calc(
+    100vw * 209 / 228
+  ); /* Ajuste o valor 428 conforme necessário para corresponder à largura da imagem */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  overflow: hidden;
 `;
