@@ -87,7 +87,7 @@ export const LeftContent = styled.section`
 
   p {
     font-size: 16px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
 `;
 

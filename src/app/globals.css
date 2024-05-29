@@ -42,11 +42,48 @@
   }
   
   .swiper-slide img {
-    display: block;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
-    object-fit: cover;
   }
+
+  @media (max-width: 1200px) {
+    .swiper-slide {
+      margin-right: 0px !important;
+      min-width: 95px;
+      width: 100%;
+    }
+
+    .mySwiper2 {
+      height: 250px !important;
+      width: 100% !important;
+    }
+
+    .swiper-wrapper {
+      /* gap: 10px; */
+      justify-content: space-between;
+      height: auto;
+      display: flex;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .mySwiper .swiper-wrapper {
+      display: flex !important;
+      width: 100% !important;
+      /* background-color: red !important; */
+      overflow-y: auto;
+      height: scroll !important;
+    }
+
+
+  .mySwiper  .swiper-slide {
+      height: 90px !important;
+      gap: 10px !important;
+      margin-right: 10px !important;
+    }
+  }
+
+  
 
 
 }

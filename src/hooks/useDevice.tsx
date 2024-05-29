@@ -29,6 +29,7 @@ const DeviceContextProvider: React.FC<DeviceContextProviderProps> = ({
     let size = window.innerWidth;
 
     console.log(size, "size?");
+    console.log(size, "size?");
 
     if (size <= 1190) {
       setIsDevice(true);

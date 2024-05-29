@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   width: 100%;
-  min-height: 573px;
+  max-height: 573px;
   background-color: black;
   display: flex;
   flex: 1;
@@ -11,5 +11,9 @@ export const Container = styled.section`
   video {
     width: 100%;
     height: 100%;
+  }
+
+  @media (max-width: 1200px) {
+    margin: 32px 0;
   }
 `;

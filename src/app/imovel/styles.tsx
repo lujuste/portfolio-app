@@ -12,12 +12,51 @@ export const MainContent = styled.main`
   overflow-y: auto;
 `;
 
+export const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+export const ImageContent = styled.div`
+  position: relative; /* Adiciona posição relativa para que a imagem possa se ajustar usando layout="fill" */
+  width: 100%;
+  min-height: 502px;
+  height: calc(
+    100vw * 309 / 308
+  ); /* Ajuste o valor 428 conforme necessário para corresponder à largura da imagem */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  overflow: hidden;
+  margin-top: 32px;
+`;
+
 export const HStack = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   margin-top: 30px;
   justify-content: space-between;
+
+  /* flex-wrap: wrap; */
+  @media (max-width: 1200px) {
+    flex-direction: column;
+
+    h2 {
+      font-size: 40px;
+      font-weight: 600;
+      max-width: 299px;
+      margin-bottom: 10px;
+    }
+
+    > p {
+      font-size: 24px;
+      font-weight: 600;
+      max-width: 299px;
+      margin-bottom: 16px;
+    }
+  }
 `;
 
 export const Carrousel = styled.div`
@@ -93,10 +132,17 @@ export const Carrousel = styled.div`
     height: 100%;
     object-fit: cover;
   }
+
+  @media (max-width: 1200px) {
+    height: auto;
+
+    /* max-width: 100%; */
+  }
 `;
 
 export const FormBox = styled.div`
-  width: 403px;
+  max-width: 403px;
+  width: 100%;
   height: 581px;
   display: flex;
   background-color: transparent;
@@ -126,6 +172,23 @@ export const FormBox = styled.div`
     color: #868686;
     margin-top: 12px;
   }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    padding: 18px 0;
+    height: auto;
+
+    label {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    > span {
+      margin-bottom: 32px;
+    }
+  }
 `;
 
 export const Input = styled.div`
@@ -145,4 +208,38 @@ export const Button = styled.button`
   height: 48px;
   border: none;
   margin-top: 18px;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    height: 42px;
+    margin-bottom: 32px;
+  }
+`;
+
+export const MobileDescription = styled.div`
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+
+  .text-description-imovel {
+    word-wrap: break-word;
+  }
+
+  .items-imovel {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    min-height: 81px;
+    /* background-color: red; */
+    margin-top: 32px;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      &:first-child {
+        height: 42px;
+      }
+    }
+  }
 `;
