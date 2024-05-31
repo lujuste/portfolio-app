@@ -46,6 +46,12 @@ const SpecificPage: React.FC = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
   const [delayImage, setDelayImage] = useState(false);
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    // Marca o estado como pronto após a montagem do componente
+    setIsReady(true);
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -54,6 +60,10 @@ const SpecificPage: React.FC = () => {
   }, []);
 
   const { isDevice } = useDevice();
+
+  if (!isReady) {
+    return null;
+  }
 
   return (
     <>
@@ -320,7 +330,15 @@ const SpecificPage: React.FC = () => {
               {isDevice && (
                 <div style={{ margin: "32px 0" }}>
                   <h2>Casa Jardim Bueno 300m²</h2>
-                  <p>R$ 3.000.000,00</p>
+                  <p
+                    style={{
+                      fontSize: "24px",
+                      fontWeight: "600",
+                      marginBottom: "-24px",
+                    }}
+                  >
+                    R$ 3.000.000,00
+                  </p>
                 </div>
               )}
 

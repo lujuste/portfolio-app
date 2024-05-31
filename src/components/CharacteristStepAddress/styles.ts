@@ -41,6 +41,10 @@ export const HStack = styled.div`
   input {
     margin-bottom: 10px;
   }
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const Container = styled.div`

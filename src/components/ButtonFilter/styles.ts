@@ -9,10 +9,15 @@ export const Container = styled.button`
   align-items: center;
   border: 2px solid #d71016;
   gap: 11px;
+  min-height: 64px;
 
   p {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     color: #000;
+
+    @media (max-width: 1200px) {
+      font-size: 14px;
+    }
   }
 `;

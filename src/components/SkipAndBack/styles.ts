@@ -49,5 +49,6 @@ export const ColumContainer = styled.div`
     font-weight: 400;
     color: #868686;
     margin-top: 16px;
+    min-height: 200px;
   }
 `;

@@ -6,6 +6,11 @@ export const Container = styled.main`
   flex-direction: column;
   margin: 0 auto;
   padding: 0 50px;
+  height: auto;
+
+  @media (max-width: 1200px) {
+    padding: 0 20px;
+  }
 `;
 
 export const Box = styled.div`
@@ -13,13 +18,18 @@ export const Box = styled.div`
   flex-direction: column;
   /* background-color: yellow; */
   width: 100%;
-  height: 375px;
+  height: auto;
   margin-top: 85px;
+
+  @media (max-width: 1200px) {
+    margin-top: 40px;
+  }
 `;
 
 export const Row = styled.div<{ gridEnd?: string }>`
   width: 100%;
-  height: 64px;
+  min-height: 64px;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /* background-color: green; */
@@ -30,13 +40,21 @@ export const Row = styled.div<{ gridEnd?: string }>`
   > :last-child {
     grid-column-end: ${({ gridEnd }) => gridEnd};
   }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const ContentButton = styled.div`
   width: 100%;
   max-width: 591px;
-  height: 64px;
-  background-color: green;
-  margin: 0 auto;
-  margin-top: 40px;
+  height: auto;
+  /* background-color: green; */
+  margin: 40px auto 0 auto;
+
+  @media (max-width: 1200px) {
+    margin-top: 40px;
+    max-width: 100%;
+  }
 `;

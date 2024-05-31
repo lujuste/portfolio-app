@@ -17,7 +17,7 @@ export const FormText = styled.textarea`
   &::placeholder {
     font-size: 14px;
     color: #a4a4a4;
-    font-family: Inter;
+    font-family: "Inter", sans-serif;
   }
 `;
 

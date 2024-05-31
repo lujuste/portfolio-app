@@ -9,7 +9,12 @@ export const HStack = styled.div`
   /* margin-top: 24px; */
   gap: 32px;
   margin-bottom: 16px;
+
   /* background-color: red; */
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 
   input {
     margin-bottom: 10px;

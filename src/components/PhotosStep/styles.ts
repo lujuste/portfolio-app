@@ -51,6 +51,12 @@ export const GridContainer = styled.div`
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 32px;
   margin: 42px 0 28px 0;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 12px;
+    grid-auto-rows: 90px;
+  }
 `;
 
 export const GridItem = styled.div`

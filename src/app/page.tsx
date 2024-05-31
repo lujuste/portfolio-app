@@ -26,8 +26,6 @@ export default function Home() {
     return null;
   }
 
-  console.log(isDevice, "device?");
-
   if (isDevice) {
     return (
       <>

@@ -14,11 +14,9 @@ const SwitchCustom: React.FC = () => {
   }, []);
 
   return (
-    <Container useSwitch={useSwitch}>
-      <Button onClick={handleChangeSwitch} useSwitch={useSwitch}>
-        {!useSwitch ? label : "Comprar"}
-      </Button>
-      <span onClick={handleChangeSwitch}>
+    <Container onClick={handleChangeSwitch} useSwitch={useSwitch}>
+      <Button useSwitch={useSwitch}>{!useSwitch ? label : "Comprar"}</Button>
+      <span style={{ pointerEvents: "none" }}>
         {" "}
         {!useSwitch ? "Comprar" : label}
       </span>

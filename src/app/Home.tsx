@@ -40,7 +40,7 @@ export default function Home() {
           buttonLabel="Conheça nossa história"
           src={buildIcon}
           content="Nossa 
-    história"
+          história"
         />
 
         <KnowUs />

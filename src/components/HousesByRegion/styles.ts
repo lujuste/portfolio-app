@@ -14,14 +14,14 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 80px;
+    gap: 0px;
     padding: 0px 20px;
   }
 
   @media (max-width: 460px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 120px;
+    gap: 0px;
     padding: 0px 20px;
   }
 `;

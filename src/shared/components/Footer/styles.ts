@@ -35,6 +35,12 @@ export const EndFooter = styled.footer`
     color: #fff;
     font-weight: 300;
   }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    height: auto;
+    padding: 0px 20px;
+  }
 `;
 
 export const TotalRightBox = styled.div`
@@ -45,6 +51,19 @@ export const TotalRightBox = styled.div`
   justify-content: center;
 
   @media (max-width: 1200px) {
+    gap: 20px;
+    margin-left: auto;
+
+    p {
+      font-size: 16px;
+      color: #fff;
+      font-weight: 300;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 500px) {
     margin: 0 auto;
     gap: 20px;
 
@@ -52,6 +71,8 @@ export const TotalRightBox = styled.div`
       font-size: 16px;
       color: #fff;
       font-weight: 300;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 `;
@@ -98,10 +119,27 @@ export const MaxWidth = styled.div`
 
   @media (max-width: 1200px) {
     flex-wrap: wrap;
-    min-height: 110px;
+    min-height: 120px;
+    margin-bottom: 10px;
+    align-items: center;
 
     > p {
-      margin-top: 20px;
+      /* margin-top: 20px; */
+      /* margin-left: auto !important; */
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-wrap: wrap;
+    min-height: 120px;
+    margin-bottom: 10px;
+    align-items: center;
+
+    > p {
+      /* margin-top: 20px; */
+      margin-left: auto !important;
+      margin-right: auto;
     }
   }
 `;
@@ -109,7 +147,7 @@ export const MaxWidth = styled.div`
 export const BoxLogo = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
   gap: 24px;
   /* padding-left: 50px; */

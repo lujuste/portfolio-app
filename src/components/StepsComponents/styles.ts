@@ -17,8 +17,52 @@ export const FormText = styled.textarea`
   &::placeholder {
     font-size: 14px;
     color: #a4a4a4;
-    font-family: Inter;
+    font-family: "Inter", sans-serif;
   }
+`;
+
+export const ImageContainerEnd = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+export const ImageContentEnd = styled.div`
+  position: relative; /* Adiciona posição relativa para que a imagem possa se ajustar usando layout="fill" */
+  width: 100%;
+  height: calc(
+    100vw * 209 / 308
+  ); /* Ajuste o valor 428 conforme necessário para corresponder à largura da imagem */
+  display: flex;
+
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  overflow: hidden;
+  margin-top: -18px;
+  margin-bottom: 20px;
+  background-position: center;
+`;
+
+export const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+export const ImageContent = styled.div`
+  position: relative; /* Adiciona posição relativa para que a imagem possa se ajustar usando layout="fill" */
+  width: 100%;
+  height: calc(
+    100vw * 109 / 308
+  ); /* Ajuste o valor 428 conforme necessário para corresponder à largura da imagem */
+  display: flex;
+
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  overflow: hidden;
+  margin-top: -18px;
+  margin-bottom: 20px;
+  background-position: center;
 `;
 
 export const VStack = styled.div`
@@ -36,6 +80,7 @@ export const HStack = styled.div`
   margin-top: 24px;
   gap: 32px;
   margin-bottom: 24px;
+  flex-wrap: wrap;
   /* background-color: red; */
 
   input {
@@ -49,10 +94,31 @@ export const Container = styled.div`
   /* background-color: brown; */
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
 
   h2 {
     font-size: 32px;
     font-weight: 600;
     width: 416px;
+    margin-right: auto;
+    margin-top: auto;
+  }
+
+  p {
+    margin-top: auto !important;
+    min-height: 200px;
+  }
+
+  @media (max-width: 1200px) {
+    h2 {
+      width: 100%;
+      font-size: 24px;
+      max-width: 341px;
+      margin-right: auto;
+      margin-bottom: 70px;
+      margin-top: 50px;
+    }
   }
 `;

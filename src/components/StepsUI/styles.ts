@@ -2,10 +2,15 @@ import styled from "styled-components";
 
 export const BoxBar = styled.div`
   display: flex;
-  width: 383px;
+  width: 100%;
   height: 20px;
   /* background-color: red; */
   margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: 500px) {
+    margin: 20px auto 8px auto;
+  }
 `;
 
 export const Container = styled.div`
@@ -18,6 +23,13 @@ export const Container = styled.div`
     font-weight: 600;
     color: #000;
     margin: 32px auto 32px auto;
+  }
+
+  @media (max-width: 500px) {
+    h3 {
+      width: 200px;
+      margin: 32px 0;
+    }
   }
 `;
 
@@ -32,9 +44,10 @@ export const Line = styled.div`
 export const Rect = styled.div<{ x: string; color: string }>`
   position: absolute;
   width: 21px;
+
   height: 21px;
   background-color: ${({ color }) => color && color};
-  left: ${({ x }) => x};
+  left: ${({ x }) => x && `calc(${x} - 11.5px)`};
   top: -10px;
   z-index: 10;
 `;

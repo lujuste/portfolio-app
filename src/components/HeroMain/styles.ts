@@ -12,8 +12,8 @@ export const PresentationHero = styled.div<{ isExpanded: boolean }>`
   position: relative;
   width: ${({ isExpanded }) => (isExpanded ? "405px" : "176px")};
   max-width: ${({ isExpanded }) => (isExpanded ? "1366px" : "176px")};
-  height: calc(100% - 60px);
-  max-height: 600px;
+  height: calc(100% - 80px);
+  max-height: 700px;
   margin-left: 42px;
   margin-top: 56px;
   align-items: center;
@@ -26,6 +26,7 @@ export const PresentationHero = styled.div<{ isExpanded: boolean }>`
   }
 
   @media (max-width: 1366px) {
+    max-height: 500px;
     width: ${({ isExpanded }) => (isExpanded ? "390px" : "176px")};
   }
 `;

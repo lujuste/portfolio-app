@@ -135,7 +135,9 @@ const Footer: React.FC<Props> = ({ margin }) => {
       </Container>
       <EndFooter>
         <MaxWidth>
-          <p>2024 © Copyright Portfolio imóveis</p>
+          <div>
+            <p>2024 © Copyright Portfolio imóveis</p>
+          </div>
 
           <TotalRightBox>
             <p>Desenvolvido por:</p>

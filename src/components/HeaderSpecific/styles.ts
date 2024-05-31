@@ -69,7 +69,6 @@ export const RightMenu = styled.div`
     font-size: 14px;
     color: #727272;
     font-weight: 700;
-    font-family: Inter;
   }
 `;
 export const SearchMenu = styled.div`
@@ -109,7 +108,7 @@ export const Input = styled.input`
     font-size: 14px;
     color: #727272;
     font-weight: 700;
-    font-family: Inter;
+    font-family: "Inter", sans-serif;
     padding: 0 32px;
   }
 `;
