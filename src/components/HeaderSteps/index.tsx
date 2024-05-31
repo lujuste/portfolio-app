@@ -12,13 +12,15 @@ type Props = {
 const HeaderSteps: React.FC<Props> = ({ Logo }) => {
   return (
     <Header>
-      <div>
-        <Image
-          width={73}
-          height={73}
-          src={Logo}
-          alt="Logo da imobiliaria portfolio"
-        />
+      <div style={{ cursor: "pointer" }}>
+        <a href="/">
+          <Image
+            width={73}
+            height={73}
+            src={Logo}
+            alt="Logo da imobiliaria portfolio"
+          />
+        </a>
       </div>
 
       <ul>
@@ -26,11 +28,11 @@ const HeaderSteps: React.FC<Props> = ({ Logo }) => {
           <StyledLink href="/">Home</StyledLink>
         </li>
         <li>
-          <StyledLink href="/about">Grupo Portfolio</StyledLink>
+          <StyledLink href="/">Grupo Portfolio</StyledLink>
         </li>
 
         <li>
-          <StyledLink href="/about">Imóveis</StyledLink>
+          <StyledLink href="/imovel">Imóveis</StyledLink>
         </li>
       </ul>
     </Header>

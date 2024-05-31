@@ -15,6 +15,7 @@ export const ContainerDevice = styled.div`
   height: auto;
   flex-direction: column;
   margin-top: 22px;
+  position: relative;
 
   h2 {
     font-size: 32px;

@@ -12,9 +12,10 @@ import HousesByRegion from "@/components/HousesByRegion";
 import Footer from "@/shared/components/Footer";
 import { useEffect, useState } from "react";
 import { useDevice } from "@/hooks/useDevice";
+import MenuHamburguer from "@/components/MenuHamburguer";
 
 export default function Home() {
-  const { isDevice } = useDevice();
+  const { isDevice, isMenu, handleCloseMenu, resizing } = useDevice();
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -30,6 +31,12 @@ export default function Home() {
     return (
       <>
         <MainContent>
+          {isDevice && !resizing && (
+            <MenuHamburguer
+              onRequestClose={handleCloseMenu}
+              isActive={isMenu}
+            />
+          )}
           <Header />
           <HomeScreen />
           <div style={{ marginTop: "32px" }}>

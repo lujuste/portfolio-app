@@ -11,6 +11,10 @@ import React, {
 // import { Container } from './styles';
 interface DeviceContextDataProps {
   isDevice: boolean;
+  isMenu: boolean;
+  handleCloseMenu: () => void;
+  handleOpenMenu: () => void;
+  resizing: boolean;
 }
 
 interface DeviceContextProviderProps {
@@ -23,13 +27,42 @@ const DeviceContextProvider: React.FC<DeviceContextProviderProps> = ({
   children,
 }) => {
   const [isDevice, setIsDevice] = useState(false);
+  const [isMenu, setIsMenu] = useState(false);
+  const [resizing, setResizing] = useState(false);
+
+  console.log(resizing, "EAI REISZE?");
+
+  useEffect(() => {
+    let resizeTimer: any;
+    const handleResize = () => {
+      setResizing(true);
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        setResizing(false);
+      }, 200); // Tempo em milissegundos após o qual o redimensionamento é considerado concluído
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(resizeTimer);
+    };
+  }, []);
+
+  const handleCloseMenu = () => {
+    setIsMenu(false);
+  };
+
+  const handleOpenMenu = () => {
+    console.log("OPEN");
+    setIsMenu(true);
+  };
+
+  console.log(resizing, "resize?");
 
   const handleDevice = () => {
-    console.log("CHAMA!");
     let size = window.innerWidth;
-
-    console.log(size, "size?");
-    console.log(size, "size?");
 
     if (size <= 1190) {
       setIsDevice(true);
@@ -48,7 +81,9 @@ const DeviceContextProvider: React.FC<DeviceContextProviderProps> = ({
   }, []);
 
   return (
-    <DeviceContext.Provider value={{ isDevice }}>
+    <DeviceContext.Provider
+      value={{ isDevice, handleOpenMenu, handleCloseMenu, isMenu, resizing }}
+    >
       {children}
     </DeviceContext.Provider>
   );

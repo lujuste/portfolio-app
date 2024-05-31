@@ -1,3 +1,4 @@
+import { darken } from "polished";
 import styled from "styled-components";
 
 export const Container = styled.header`
@@ -64,6 +65,7 @@ export const RightMenu = styled.div`
   border-right: none;
   padding: 0 22px;
   gap: 10px;
+  cursor: pointer;
 
   p {
     font-size: 14px;
@@ -96,6 +98,11 @@ export const Button = styled.button`
   border: none;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${(props) => darken(0.1, "#D71016")};
+  }
 `;
 
 export const Input = styled.input`
@@ -103,6 +110,12 @@ export const Input = styled.input`
   height: 100%;
   background-color: none;
   border: none;
+  outline: none;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
 
   &::placeholder {
     font-size: 14px;
@@ -116,6 +129,14 @@ export const Input = styled.input`
 export const VStack = styled.div`
   display: flex;
   flex-direction: column;
+
+  .active {
+    color: red;
+  }
+
+  .link .active {
+    color: red;
+  }
 `;
 
 export const LineDivider = styled.div`

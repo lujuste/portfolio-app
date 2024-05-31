@@ -22,9 +22,10 @@ import { useDevice } from "@/hooks/useDevice";
 import Header from "@/components/Header";
 import BestSearchHouses from "@/components/BestSearchHouses";
 import PreContent from "@/components/PreContent";
+import MenuHamburguer from "@/components/MenuHamburguer";
 
 const SearchPage: React.FC = () => {
-  const { isDevice } = useDevice();
+  const { isDevice, handleCloseMenu, isMenu, resizing } = useDevice();
 
   const [isReady, setIsReady] = useState(false);
 
@@ -40,6 +41,9 @@ const SearchPage: React.FC = () => {
   return (
     <>
       <Container>
+        {isDevice && !resizing && (
+          <MenuHamburguer onRequestClose={handleCloseMenu} isActive={isMenu} />
+        )}
         {!isDevice ? <HeaderSpecific isSearch /> : <Header />}
         <Box>
           <SwitchCustom />

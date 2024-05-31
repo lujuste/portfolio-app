@@ -1,3 +1,4 @@
+import { darken } from "polished";
 import styled from "styled-components";
 
 export const Container = styled.footer<{ margin?: string }>`
@@ -82,6 +83,11 @@ export const List = styled.div`
   display: flex;
   min-width: 100px;
   margin-left: 36px;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 `;
 
 export const BoxContacts = styled.div`
@@ -98,6 +104,11 @@ export const BoxContacts = styled.div`
       list-style: none;
       color: #fff;
       font-weight: 300;
+      cursor: pointer;
+      transition: all 200ms linear;
+      &:hover {
+        color: ${(props) => darken(0.2, "#fff")};
+      }
     }
   }
 

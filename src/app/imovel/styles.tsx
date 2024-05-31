@@ -1,5 +1,6 @@
 "use client";
 
+import { darken } from "polished";
 import styled from "styled-components";
 
 export const MainContent = styled.main`
@@ -209,6 +210,10 @@ export const Button = styled.button`
   border: none;
   margin-top: 18px;
   width: 100%;
+  cursor: pointer;
+  &:hover {
+    background-color: ${(props) => darken(0.1, "#D71016")};
+  }
 
   @media (max-width: 1200px) {
     height: 42px;

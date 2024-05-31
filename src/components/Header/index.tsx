@@ -9,28 +9,32 @@ import Image from "next/image";
 import { useDevice } from "@/hooks/useDevice";
 
 const Header: React.FC = () => {
-  const { isDevice } = useDevice();
+  const { isDevice, handleOpenMenu } = useDevice();
 
   if (isDevice) {
     return (
       <Container>
-        <Image
-          src={Logo}
-          width={157}
-          height={24}
-          quality={100}
-          alt="logo-imobiliaria-portfolio"
-          unoptimized
-        />
+        <a href="/">
+          <Image
+            src={Logo}
+            width={157}
+            height={24}
+            quality={100}
+            alt="logo-imobiliaria-portfolio"
+            unoptimized
+          />
+        </a>
 
-        <Image
-          src={NavIcon}
-          width={37}
-          height={22}
-          quality={100}
-          alt="logo-imobiliaria-portfolio"
-          unoptimized
-        />
+        <div onClick={handleOpenMenu} style={{ cursor: "pointer" }}>
+          <Image
+            src={NavIcon}
+            width={37}
+            height={22}
+            quality={100}
+            alt="logo-imobiliaria-portfolio"
+            unoptimized
+          />
+        </div>
       </Container>
     );
   }

@@ -6,6 +6,14 @@ export const StyledNav = styled.nav`
   gap: 38px;
   align-items: center;
 
+  .active {
+    color: red;
+  }
+
+  .link .active {
+    color: red;
+  }
+
   > ul {
     display: flex;
     text-decoration: none;
@@ -28,6 +36,19 @@ export const StyledLink = styled.a`
   font-size: 16px;
   font-weight: 600;
   margin-left: 7px;
+  transition: all 150ms linear;
+
+  &:hover {
+    color: #d71016;
+  }
+
+  .active {
+    color: red;
+  }
+
+  .link .active {
+    color: red;
+  }
 `;
 
 export const VStack = styled.div`

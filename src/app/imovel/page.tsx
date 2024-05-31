@@ -41,6 +41,7 @@ import { MapContent } from "@/components/DescriptionSpecific/styles";
 import GoogleMap from "@/components/GoogleMap";
 import PreContent from "@/components/PreContent";
 import BestSearchHouses from "@/components/BestSearchHouses";
+import MenuHamburguer from "@/components/MenuHamburguer";
 
 const SpecificPage: React.FC = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
@@ -59,7 +60,7 @@ const SpecificPage: React.FC = () => {
     }, 0);
   }, []);
 
-  const { isDevice } = useDevice();
+  const { isDevice, isMenu, handleCloseMenu, resizing } = useDevice();
 
   if (!isReady) {
     return null;
@@ -68,6 +69,9 @@ const SpecificPage: React.FC = () => {
   return (
     <>
       <MainContent>
+        {isDevice && !resizing && (
+          <MenuHamburguer onRequestClose={handleCloseMenu} isActive={isMenu} />
+        )}
         {!isDevice ? <HeaderSpecific /> : <Header />}
 
         <HStack>

@@ -20,6 +20,7 @@ import CustomButton from "../CustomButton";
 import HeroMain from "../HeroMain";
 import { useDevice } from "@/hooks/useDevice";
 import { RadialContainer } from "../HeroMain/styles";
+import MenuHamburguer from "../MenuHamburguer";
 
 const HomeScreen: React.FC = () => {
   const [imageExpanded, setImageExpanded] = useState({
@@ -148,7 +149,7 @@ const HomeScreen: React.FC = () => {
             src={
               "https://img.freepik.com/fotos-premium/exterior-de-casa-bonita-e-moderna-com-grama-verde_293060-14722.jpg"
             }
-            text={"Jardim Bueno"}
+            text={"Casa Alphaville"}
           />
 
           <HeroMain
@@ -157,7 +158,7 @@ const HomeScreen: React.FC = () => {
             src={
               "https://static.vecteezy.com/system/resources/previews/028/114/564/non_2x/unique-industrial-architecture-house-in-daylight-realistic-ai-generative-free-photo.jpg"
             }
-            text={"Jardim Bueno"}
+            text={"Jardim Veneza"}
           />
         </HStackHero>
       </HStack>

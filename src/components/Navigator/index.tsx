@@ -26,7 +26,7 @@ export function Navigator() {
         <li>
           <StyledLink
             className={`link ${pathname === "/about" ? "active" : ""}`}
-            href="/about"
+            href="/"
           >
             Grupo Portfolio
           </StyledLink>
@@ -34,8 +34,8 @@ export function Navigator() {
 
         <li>
           <StyledLink
-            className={`link ${pathname === "/about" ? "active" : ""}`}
-            href="/about"
+            className={`link ${pathname === "/imovel" ? "active" : ""}`}
+            href="/imovel"
           >
             Imóveis
           </StyledLink>

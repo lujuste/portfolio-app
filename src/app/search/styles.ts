@@ -9,7 +9,7 @@ export const Container = styled.main`
   height: auto;
 
   @media (max-width: 1200px) {
-    padding: 0 20px;
+    padding: 20px 20px;
   }
 `;
 

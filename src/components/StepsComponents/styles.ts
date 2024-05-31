@@ -99,7 +99,7 @@ export const Container = styled.div`
   overflow-y: auto;
 
   h2 {
-    font-size: 32px;
+    font-size: 32px !important;
     font-weight: 600;
     width: 416px;
     margin-right: auto;

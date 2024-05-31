@@ -3,6 +3,7 @@ import { Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
 import StyledComponentsRegistry from "@/lib/registry";
 import { DeviceContextProvider } from "@/hooks/useDevice";
+import MenuHamburguer from "@/components/MenuHamburguer";
 
 const inter = Inter({ subsets: ["latin"] });
 

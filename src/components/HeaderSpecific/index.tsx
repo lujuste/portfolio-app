@@ -43,26 +43,33 @@ const HeaderSpecific: React.FC<Props> = ({ isSearch = false }) => {
             </StyledLink>
           </li>
           <li>
-            <StyledLink href="/about">Grupo Portfolio</StyledLink>
+            <StyledLink href="/">Grupo Portfolio</StyledLink>
           </li>
           <li>
-            <StyledLink href="/blog/hello-world">Imóveis</StyledLink>
+            <StyledLink
+              className={`link ${pathname === "/imovel" ? "active" : ""}`}
+              href="/imovel"
+            >
+              Imóveis
+            </StyledLink>
           </li>
           <li>
-            <StyledLink href="/blog/hello-world">Financiamentos</StyledLink>
+            <StyledLink href="/">Financiamentos</StyledLink>
           </li>
         </ul>
 
-        <div>
-          <Image
-            src={logo}
-            width={73}
-            height={73}
-            quality={100}
-            priority
-            alt="logo-imobiliaria-portfolio"
-            unoptimized
-          />
+        <div style={{ cursor: "pointer" }}>
+          <a href="/">
+            <Image
+              src={logo}
+              width={73}
+              height={73}
+              quality={100}
+              priority
+              alt="logo-imobiliaria-portfolio"
+              unoptimized
+            />
+          </a>
         </div>
 
         {isSearch ? (

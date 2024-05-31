@@ -10,7 +10,7 @@ export const Container = styled.div`
   overflow: hidden;
 
   @media (max-width: 1200px) {
-    padding: 20px 20px;
+    padding: 30px 20px;
   }
   /* background-color: red; */
 `;

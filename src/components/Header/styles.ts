@@ -13,6 +13,7 @@ export const StyledHeader = styled.header`
     width: 259px;
     height: 40px;
     display: flex;
+    cursor: pointer;
   }
 `;
 

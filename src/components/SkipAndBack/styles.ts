@@ -1,3 +1,4 @@
+import { darken } from "polished";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -22,6 +23,9 @@ export const ButtonSkip = styled.button`
   font-size: 16px;
   font-weight: 600;
   gap: 7px;
+  &:hover {
+    background-color: ${(props) => darken(0.1, "#D71016")};
+  }
 `;
 
 export const ButtonBack = styled.button`

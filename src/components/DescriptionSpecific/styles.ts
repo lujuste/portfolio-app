@@ -1,3 +1,4 @@
+import { darken } from "polished";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -130,6 +131,11 @@ export const Button = styled.button`
   height: 48px;
   border: none;
   margin-top: 18px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${(props) => darken(0.1, "#D71016")};
+  }
 `;
 
 export const DetailsHorizontal = styled.div`

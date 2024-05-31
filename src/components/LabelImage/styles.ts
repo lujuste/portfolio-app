@@ -17,5 +17,7 @@ export const LabelImage = styled.div<{ isExpanded: boolean }>`
   span {
     font-size: 32px;
     color: #fff;
+    width: 214px;
+    font-weight: 600;
   }
 `;

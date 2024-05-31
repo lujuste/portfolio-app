@@ -21,11 +21,12 @@ import HeaderSteps from "@/components/HeaderSteps";
 import StepsComponents from "@/components/StepsComponents";
 import { useDevice } from "@/hooks/useDevice";
 import Header from "@/components/Header";
+import MenuHamburguer from "@/components/MenuHamburguer";
 
 const Steps: React.FC = () => {
   const [currentStep, setCurrentStep] = useState("initial");
 
-  const { isDevice } = useDevice();
+  const { isDevice, handleCloseMenu, isMenu, resizing } = useDevice();
 
   const [isReady, setIsReady] = useState(false);
 
@@ -40,6 +41,9 @@ const Steps: React.FC = () => {
 
   return (
     <Container>
+      {isDevice && !resizing && (
+        <MenuHamburguer onRequestClose={handleCloseMenu} isActive={isMenu} />
+      )}
       {!isDevice && (
         <ImageContent>
           <ImageContainer>
