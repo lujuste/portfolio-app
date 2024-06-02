@@ -31,7 +31,7 @@ const RenderStepScreen: React.FC<Props> = ({ nextStep, currentStep }) => {
       {currentStep === "4" && <CharacteristStepSpecial />}
       {currentStep === "5" && <PhotosStep />}
 
-      <SkipAndBack nextStep={nextStep} />
+      <SkipAndBack currentStep={currentStep} nextStep={nextStep} />
     </Container>
   );
 };

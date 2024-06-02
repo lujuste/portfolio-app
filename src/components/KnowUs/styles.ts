@@ -127,6 +127,7 @@ export const ImageContent = styled.div`
   justify-content: center; /* Centraliza a imagem horizontalmente */
   align-items: center; /* Centraliza a imagem verticalmente */
   overflow: hidden;
+  margin-top: -20px;
 `;
 
 export const ImageContentLarge = styled.div`

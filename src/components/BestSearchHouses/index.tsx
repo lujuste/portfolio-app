@@ -2,7 +2,6 @@ import React from "react";
 import {
   BoxDetails,
   BoxDetailsLarge,
-  BoxImage,
   Container,
   Detail,
   HBox,
@@ -21,11 +20,10 @@ import SecondaryContent from "../SecondaryContent";
 import Informations from "../Informations";
 import { useDevice } from "@/hooks/useDevice";
 import Image from "next/image";
-
-import regua from "@/assets/regua.svg";
-import bed from "@/assets/cama.svg";
-import carro from "@/assets/carro.svg";
 import iconArea from "@/assets/area.svg";
+
+import houseExample from "@/assets/casa2.png";
+import { useRouter } from "next/navigation";
 
 type Props = {
   src: string;
@@ -34,6 +32,7 @@ type Props = {
 
 const BestSearchHouses: React.FC = () => {
   const { isDevice } = useDevice();
+  const router = useRouter();
 
   const Info: React.FC<Props> = ({ src, content }) => {
     return (
@@ -45,13 +44,13 @@ const BestSearchHouses: React.FC = () => {
   };
 
   return (
-    <Container>
+    <Container onClick={() => router.push("/imovel")}>
       {isDevice ? (
         <VStack>
           <ImageContent>
             <ImageContainer>
               <Image
-                src="https://img.freepik.com/fotos-gratis/design-house-villa-moderna-com-sala-de-estar-em-plano-aberto-e-ala-de-quarto-privado-grande-terraco-com-privacidade_1258-169741.jpg"
+                src={houseExample}
                 alt="Imagem principal de uma casa de luxo"
                 layout="fill"
                 objectFit="cover"
@@ -93,7 +92,7 @@ const BestSearchHouses: React.FC = () => {
           <ImageContent>
             <ImageContainer>
               <Image
-                src="https://img.freepik.com/fotos-gratis/design-house-villa-moderna-com-sala-de-estar-em-plano-aberto-e-ala-de-quarto-privado-grande-terraco-com-privacidade_1258-169741.jpg"
+                src={houseExample}
                 alt="Imagem principal de uma casa de luxo"
                 layout="fill"
                 objectFit="cover"
@@ -135,7 +134,7 @@ const BestSearchHouses: React.FC = () => {
           <ImageContentLarge>
             <ImageContainer>
               <Image
-                src="https://img.freepik.com/fotos-gratis/design-house-villa-moderna-com-sala-de-estar-em-plano-aberto-e-ala-de-quarto-privado-grande-terraco-com-privacidade_1258-169741.jpg"
+                src={houseOne}
                 alt="Imagem principal de uma casa de luxo"
                 layout="fill"
                 objectFit="cover"

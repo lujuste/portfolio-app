@@ -23,10 +23,11 @@ import Header from "@/components/Header";
 import BestSearchHouses from "@/components/BestSearchHouses";
 import PreContent from "@/components/PreContent";
 import MenuHamburguer from "@/components/MenuHamburguer";
+import { useRouter } from "next/navigation";
 
 const SearchPage: React.FC = () => {
   const { isDevice, handleCloseMenu, isMenu, resizing } = useDevice();
-
+  const router = useRouter();
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -62,7 +63,13 @@ const SearchPage: React.FC = () => {
           )}
 
           <ContentButton>
-            <CustomButton title="Encontrar imóvel" />
+            <CustomButton
+              onClick={() => {
+                console.log("clico");
+                router.push("/search");
+              }}
+              title="Encontrar imóvel"
+            />
           </ContentButton>
         </Box>
 

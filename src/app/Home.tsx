@@ -10,15 +10,19 @@ import ListCatalog from "@/components/ListCatalog";
 import KnowUs from "@/components/KnowUs";
 import HousesByRegion from "@/components/HousesByRegion";
 import Footer from "@/shared/components/Footer";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <MainContent>
         <Header />
         <HomeScreen />
         <PreContent
-          callback={() => {}}
+          callback={() => {
+            router.push("/search");
+          }}
           buttonLabel="Ver todos os imóveis"
           src={heartIcon}
           content="Imóveis mais buscados"
@@ -27,7 +31,9 @@ export default function Home() {
         <BestSearchHouses />
 
         <PreContent
-          callback={() => {}}
+          callback={() => {
+            router.push("/search");
+          }}
           buttonLabel="Ver todos os imóveis"
           src={buildIcon}
           content="Novidades no catálogo"

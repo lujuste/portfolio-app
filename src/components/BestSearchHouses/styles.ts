@@ -6,9 +6,10 @@ export const Container = styled.div`
   flex-direction: column;
   max-width: 1366px;
   margin: 70px auto;
+  cursor: pointer;
 
   @media (max-width: 1366px) {
-    margin: 32px auto;
+    margin: 16px auto;
   }
 
   /* padding-left: 50px; */
@@ -19,7 +20,6 @@ export const BoxImage = styled.div`
   height: auto;
   display: flex;
   height: 200px;
-  background-color: red;
 `;
 
 export const ImageContainer = styled.div`

@@ -31,6 +31,10 @@ export const List = styled.div`
   display: flex;
   margin-top: 54px;
 
+  @media (max-width: 1200px) {
+    margin-top: 28px;
+  }
+
   ul {
     margin-top: 24px;
     li {

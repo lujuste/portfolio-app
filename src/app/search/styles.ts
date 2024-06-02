@@ -50,6 +50,7 @@ export const ContentButton = styled.div`
   width: 100%;
   max-width: 591px;
   height: auto;
+
   /* background-color: green; */
   margin: 40px auto 0 auto;
 

@@ -30,8 +30,6 @@ const DeviceContextProvider: React.FC<DeviceContextProviderProps> = ({
   const [isMenu, setIsMenu] = useState(false);
   const [resizing, setResizing] = useState(false);
 
-  console.log(resizing, "EAI REISZE?");
-
   useEffect(() => {
     let resizeTimer: any;
     const handleResize = () => {
@@ -58,8 +56,6 @@ const DeviceContextProvider: React.FC<DeviceContextProviderProps> = ({
     console.log("OPEN");
     setIsMenu(true);
   };
-
-  console.log(resizing, "resize?");
 
   const handleDevice = () => {
     let size = window.innerWidth;

@@ -102,13 +102,15 @@ export const SelectStyled = styled.div`
   position: relative;
 
   span {
-    font-size: 16px;
-    font-weight: semi-bold;
+    font-size: 14px;
+    font-weight: 600;
     color: #12100c;
   }
 
   @media (max-width: 1200px) {
     min-width: 0;
+    font-size: 14px;
+    gap: 6px;
   }
 `;
 

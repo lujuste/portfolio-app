@@ -22,7 +22,7 @@ import Header from "@/components/Header";
 import MenuHamburguer from "@/components/MenuHamburguer";
 
 const Steps: React.FC = () => {
-  const [currentStep, setCurrentStep] = useState("1");
+  const [currentStep, setCurrentStep] = useState("initial");
 
   const { isDevice, handleCloseMenu, isMenu, resizing } = useDevice();
 

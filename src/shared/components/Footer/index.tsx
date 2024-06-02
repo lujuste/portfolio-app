@@ -44,9 +44,11 @@ const Footer: React.FC<Props> = ({ margin }) => {
                   <strong>Links úteis</strong>
                 </li>
                 <li>
-                  <a href="/steps">Encomende seu imóvel</a>
+                  <a href="/cadastrar">Encomende seu imóvel</a>
                 </li>
-                <li>Cadastre seu imóvel</li>
+                <li>
+                  <a href="/steps">Cadastre seu imóvel</a>
+                </li>
                 <li>Seja um parceiro</li>
               </ul>
             </List>
@@ -111,7 +113,9 @@ const Footer: React.FC<Props> = ({ margin }) => {
                 <li>
                   <strong>Links úteis</strong>
                 </li>
-                <li>Encomende seu imóvel</li>
+                <li>
+                  <a href="/steps">Encomende seu imóvel</a>
+                </li>
                 <li>Cadastre seu imóvel</li>
                 <li>Seja um parceiro</li>
               </ul>

@@ -45,7 +45,7 @@ export const HStack = styled.div`
     flex-direction: column;
 
     h2 {
-      font-size: 40px;
+      font-size: 16px;
       font-weight: 600;
       max-width: 299px;
       margin-bottom: 10px;

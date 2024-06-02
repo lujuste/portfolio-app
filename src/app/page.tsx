@@ -13,10 +13,12 @@ import Footer from "@/shared/components/Footer";
 import { useEffect, useState } from "react";
 import { useDevice } from "@/hooks/useDevice";
 import MenuHamburguer from "@/components/MenuHamburguer";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const { isDevice, isMenu, handleCloseMenu, resizing } = useDevice();
   const [isReady, setIsReady] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     // Marca o estado como pronto após a montagem do componente
@@ -41,21 +43,26 @@ export default function Home() {
           <HomeScreen />
           <div style={{ marginTop: "32px" }}>
             <PreContent
-              callback={() => {}}
+              callback={() => {
+                router.push("/search");
+              }}
               buttonLabel="Ver todos os imóveis"
               src={heartIcon}
               content="Imóveis mais buscados"
             />
           </div>
+          <div style={{ marginTop: "6px" }}></div>
           <BestSearchHouses />
-
+          <BestSearchHouses />
           <PreContent
-            callback={() => {}}
+            callback={() => {
+              router.push("/search");
+            }}
             buttonLabel="Ver todos os imóveis"
             src={buildIcon}
             content="Novidades no catálogo"
           />
-
+          <div style={{ marginTop: "6px" }}></div>
           <BestSearchHouses />
 
           <PreContent
@@ -89,14 +96,19 @@ export default function Home() {
         <Header />
         <HomeScreen />
         <PreContent
-          callback={() => {}}
+          callback={() => {
+            router.push("/search");
+          }}
           buttonLabel="Ver todos os imóveis"
           src={heartIcon}
           content="Imóveis mais buscados"
         />
         <BestSearchHouses />
+
         <PreContent
-          callback={() => {}}
+          callback={() => {
+            router.push("/search");
+          }}
           buttonLabel="Ver todos os imóveis"
           src={buildIcon}
           content="Novidades no catálogo"

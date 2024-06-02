@@ -20,12 +20,14 @@ import CustomButton from "../CustomButton";
 import HeroMain from "../HeroMain";
 import { useDevice } from "@/hooks/useDevice";
 import { RadialContainer } from "../HeroMain/styles";
-import MenuHamburguer from "../MenuHamburguer";
+import { useRouter } from "next/navigation";
 
 const HomeScreen: React.FC = () => {
   const [imageExpanded, setImageExpanded] = useState({
     visible: 1,
   });
+
+  const router = useRouter();
 
   const { isDevice } = useDevice();
 
@@ -65,7 +67,13 @@ const HomeScreen: React.FC = () => {
           </SelectStyled>
         </Horizontal>
         <Search />
-        <CustomButton title="Encontrar imóvel" />
+        <CustomButton
+          onClick={() => {
+            console.log("clico");
+            router.push("/search");
+          }}
+          title="Encontrar imóvel"
+        />
         <Horizontal>
           <ImageContent>
             <RadialContainer />
@@ -79,14 +87,14 @@ const HomeScreen: React.FC = () => {
                 priority
               />
             </ImageContainer>
-            <span>Casa Alphaville</span>
+            <span>Jardim Bueno</span>
           </ImageContent>
 
           <ImageContent>
             <RadialContainer />
             <ImageContainer>
               <Image
-                src="https://img.freepik.com/fotos-gratis/design-house-villa-moderna-com-sala-de-estar-em-plano-aberto-e-ala-de-quarto-privado-grande-terraco-com-privacidade_1258-169741.jpg"
+                src="https://img.freepik.com/fotos-premium/exterior-de-casa-bonita-e-moderna-com-grama-verde_293060-14722.jpg"
                 alt="Imagem principal de uma casa de luxo"
                 layout="fill"
                 objectFit="cover"
@@ -130,7 +138,13 @@ const HomeScreen: React.FC = () => {
 
           <Search />
 
-          <CustomButton title="Encontrar imóvel" />
+          <CustomButton
+            onClick={() => {
+              console.log("clico");
+              router.push("/search");
+            }}
+            title="Encontrar imóvel"
+          />
         </VStack>
 
         <HStackHero className="box-primary-images">

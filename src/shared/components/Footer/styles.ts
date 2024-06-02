@@ -149,6 +149,7 @@ export const MaxWidth = styled.div`
 
     > p {
       /* margin-top: 20px; */
+      transform: translateY(16px);
       margin-left: auto !important;
       margin-right: auto;
     }

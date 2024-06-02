@@ -65,7 +65,7 @@ const InitialComponent: React.FC<{
           <Input />
         </VStack>
       </HStack>
-      <Button onClick={() => setCurrentStep("1")} height="48px">
+      <Button onClick={() => setCurrentStep("end")} height="48px">
         Quero encontrar esse imóvel
       </Button>
       <span style={{ minHeight: "200px" }}>
@@ -85,7 +85,7 @@ const StepsComponents: React.FC<Props> = ({ currentStep, setCurrentStep }) => {
     setCurrentStep((prev) => {
       let clonePrev = prev;
       if (prev === "initial") {
-        clonePrev = "1";
+        clonePrev = "end";
       } else if (prev === "5") {
         clonePrev = "end";
       } else {

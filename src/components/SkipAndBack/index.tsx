@@ -1,13 +1,14 @@
 import React from "react";
 
 import { ButtonBack, ButtonSkip, Container, ColumContainer } from "./styles";
-import { ArrowLeft, ArrowRight } from "phosphor-react";
+import { ArrowLeft, ArrowRight, Check } from "phosphor-react";
 
 type Props = {
   nextStep(): void;
+  currentStep: string;
 };
 
-const SkipAndBack: React.FC<Props> = ({ nextStep }) => {
+const SkipAndBack: React.FC<Props> = ({ nextStep, currentStep }) => {
   return (
     <ColumContainer>
       <Container>
@@ -15,9 +16,15 @@ const SkipAndBack: React.FC<Props> = ({ nextStep }) => {
           {" "}
           <ArrowLeft size={24} /> Anterior
         </ButtonBack>
-        <ButtonSkip onClick={nextStep}>
-          Próximo <ArrowRight size={24} />
-        </ButtonSkip>
+        {currentStep !== "5" ? (
+          <ButtonSkip onClick={nextStep}>
+            Próximo <ArrowRight size={24} />
+          </ButtonSkip>
+        ) : (
+          <ButtonSkip onClick={nextStep}>
+            Salvar <Check size={24} />
+          </ButtonSkip>
+        )}
       </Container>
 
       <p>
