@@ -96,6 +96,11 @@ export const BoxContacts = styled.div`
   margin-left: auto;
   margin-top: 51px;
   padding: 0 10px;
+  justify-content: flex-end;
+
+  a {
+    transition: all 200ms linear;
+  }
 
   ul {
     li {
@@ -106,8 +111,10 @@ export const BoxContacts = styled.div`
       font-weight: 300;
       cursor: pointer;
       transition: all 200ms linear;
-      &:hover {
-        color: ${(props) => darken(0.2, "#fff")};
+      a {
+        &:hover {
+          color: ${(props) => darken(0.2, "#fff")};
+        }
       }
     }
   }
@@ -163,6 +170,11 @@ export const BoxLogo = styled.div`
   justify-content: center;
   gap: 24px;
   /* padding-left: 50px; */
+  /* background-color: red; */
+
+  .logo-image {
+    transform: translateX(-16px);
+  }
 
   h3 {
     font-size: 16px;

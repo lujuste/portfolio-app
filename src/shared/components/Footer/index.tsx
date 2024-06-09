@@ -102,6 +102,7 @@ const Footer: React.FC<Props> = ({ margin }) => {
               quality={100}
               alt="logo-imobiliaria-portfolio"
               unoptimized
+              className="logo-image"
             />
 
             <h3>CRECI: 10930J || Política de Privacidade</h3>
@@ -116,8 +117,12 @@ const Footer: React.FC<Props> = ({ margin }) => {
                 <li>
                   <a href="/steps">Encomende seu imóvel</a>
                 </li>
-                <li>Cadastre seu imóvel</li>
-                <li>Seja um parceiro</li>
+                <li>
+                  <a href="/cadastrar">Cadastre seu imóvel</a>
+                </li>
+                <li>
+                  <a href="/cadastrar">Seja um parceiro</a>
+                </li>
               </ul>
             </List>
             <List>
@@ -125,15 +130,19 @@ const Footer: React.FC<Props> = ({ margin }) => {
                 <li>
                   <strong>Financiamento</strong>
                 </li>
-                <li>Financiamento e bancos</li>
+                <li>
+                  <a href="/cadastrar">Financiamento e bancos</a>
+                </li>
               </ul>
             </List>
             <List>
               <ul>
                 <li>
-                  <strong>Contato</strong>
+                  <strong> Contato</strong>
                 </li>
-                <li>Fale conosco</li>
+                <li>
+                  <a href="">Fale conosco</a>
+                </li>
               </ul>
             </List>
           </BoxContacts>
